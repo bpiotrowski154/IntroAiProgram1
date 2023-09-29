@@ -30,7 +30,7 @@ while not done:
                     continue
                 valid = True
 
-    print("             Search  Options             ")
+    print("\n             Search  Options             ")
     print("-----------------------------------------")
     print("1. Brute Force Search")
     print("2. Breadth-First Search")

@@ -7,7 +7,7 @@ def createGraph():
     graph = {}
 
     #create coordinates of cities
-    with open("IntroAiProgram1\coordinates.csv", "r") as file:
+    with open("coordinates.csv", "r") as file:
         csv_reader = csv.reader(file)
         coordList = []
         for row in csv_reader:
@@ -15,7 +15,7 @@ def createGraph():
     file.close()
 
     #create graph
-    with open("IntroAiProgram1\Adjacencies.txt", "r") as file1:
+    with open("Adjacencies.txt", "r") as file1:
         r = csv.reader(file1, delimiter=' ')
         for line in r:
             adjacencyA = line[0]
@@ -52,7 +52,7 @@ def createGraph():
 def generateCityList():
     cityList = []
 
-    with open("IntroAiProgram1\coordinates.csv", "r") as file:
+    with open("coordinates.csv", "r") as file:
         csv_reader = csv.reader(file)
         for row in csv_reader:
             cityList.append(row[0])
@@ -358,7 +358,7 @@ def aStarSearch(graph, start, goal):
 
 def heuristic(node, goal):
     x1, y1, x2, y2 = None, None, None, None
-    with open("IntroAiProgram1\coordinates.csv", "r") as file:
+    with open("coordinates.csv", "r") as file:
         csv_reader = csv.reader(file)
         for row in csv_reader:
             if row[0] == node:
